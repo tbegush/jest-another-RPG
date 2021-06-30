@@ -8,5 +8,10 @@ function Potion(name) {
     this.value = Math.floor(Math.random() * 5 + 7);
   }
 }
-
+Player.prototype.isAlive = function() {
+    if (this.health === 0) {
+      return false;
+    }
+    return true;
+  };
 module.exports = Potion;
